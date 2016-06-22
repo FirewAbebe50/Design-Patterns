@@ -17,7 +17,7 @@ public class Client {
 
 		// We can create a factory to identity letter symmetry, that will
 		// instantiate the appropriate concrete class with the help of first
-		// line
+		// line of input file
 		// But, for this lab, as we've not studied factory pattern yet, I'm
 		// using concrete class directly
 		LetterSymmetry ls = new VerticalSymmetry();
