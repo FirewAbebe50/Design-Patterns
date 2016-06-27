@@ -19,7 +19,7 @@ public class Client {
 		TransformSquare scale = new ScaleSquare(s, 2);
 		invoker.transformSquare(scale);
 
-		invoker.undoTransformation();
+		//invoker.undoTransformation();
 //		invoker.undoTransformation();
 	}
 }
