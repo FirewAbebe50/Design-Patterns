@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="memento.mementoController">
+    <children>
+        <Pane layoutX="14.0" layoutY="63.0" prefHeight="189.0" prefWidth="572.0">
+            <children>
+                <Label layoutX="22.0" layoutY="18.0" prefHeight="20.0" prefWidth="81.0" text="Name">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="21.0" layoutY="57.0" prefHeight="17.0" prefWidth="81.0" text="Address">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="userName" layoutX="103.0" layoutY="15.0" onKeyTyped="#textFieldEvent" prefHeight="25.0" prefWidth="330.0" promptText="Full Name">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="userAddress" layoutX="103.0" layoutY="54.0" onKeyTyped="#textFieldEvent" prefHeight="25.0" prefWidth="330.0" promptText="Permanent Address ">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="userEmail" layoutX="103.0" layoutY="94.0" onKeyTyped="#textFieldEvent" prefHeight="25.0" prefWidth="330.0" promptText="Email Address">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="userContact" layoutX="103.0" layoutY="132.0" onKeyTyped="#textFieldEvent" prefHeight="25.0" prefWidth="330.0" promptText="Contact Number">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <Label layoutX="21.0" layoutY="96.0" prefHeight="17.0" prefWidth="81.0" text="E-mail">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="19.0" layoutY="135.0" prefHeight="17.0" prefWidth="81.0" text="Contact">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Label layoutX="23.0" layoutY="38.0" text="Create User Profile" textFill="#0d3579">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnLoad" layoutX="119.0" layoutY="269.0" mnemonicParsing="false" onAction="#handleButtonLoadClick" prefHeight="25.0" prefWidth="81.0" text="Load">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <Button id="btnUndo" layoutX="223.0" layoutY="269.0" mnemonicParsing="false" onAction="#handleButtUndoClick" prefHeight="25.0" prefWidth="81.0" text="Undo">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <Button id="btnSave" layoutX="327.0" layoutY="270.0" mnemonicParsing="false" onAction="#handleButtonSaveClick" prefHeight="25.0" prefWidth="81.0" text="Save">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+      <Label fx:id="errorMessage" layoutX="105.0" layoutY="328.0" prefHeight="17.0" prefWidth="330.0" textFill="#eb1414">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
