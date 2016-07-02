@@ -6,7 +6,7 @@ public class ArchiveTemplateHandler extends TemplateHandler {
 	public void handleContent(Content content) {
 
 		// can handle the content
-		if (!content.contentType.equals("Front-Page")) {
+		if (content.contentType.equals("archive")) {
 
 			System.out.println("Rendering content on the Archive Template");
 			// render the content on the template

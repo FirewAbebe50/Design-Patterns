@@ -5,7 +5,7 @@ public class SingleTemplateHandler extends TemplateHandler {
 	@Override
 	public void handleContent(Content content) {
 		// can handle the content
-		if (content.contentType.equals("Image") || content.contentType.equals("Post")) {
+		if (content.contentType.equals("Post")) {
 
 			System.out.println("Rendering content on the Archive Template");
 			// render the content on the template

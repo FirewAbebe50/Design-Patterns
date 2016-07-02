@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="211.0" prefWidth="501.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs525.labs.state.MainFormController">
+   <center>
+      <HBox prefHeight="57.0" prefWidth="286.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="49.0" prefWidth="78.0">
+               <children>
+                  <Button fx:id="leftButton" mnemonicParsing="false" onAction="#btnLeftAction" prefHeight="31.0" prefWidth="66.0" text="Left" textFill="#2205e1">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+               </children>
+            </VBox>
+            <VBox prefHeight="46.0" prefWidth="117.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnAccelerateAction" prefHeight="31.0" prefWidth="106.0" text="Accelerate" textFill="#c30b0b">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+               </children>
+            </VBox>
+            <VBox prefHeight="52.0" prefWidth="78.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnRightAction" prefHeight="31.0" prefWidth="70.0" text="Right" textFill="#511c1c">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+               </children>
+            </VBox>
+            <VBox prefHeight="46.0" prefWidth="85.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnBrakeAction" prefHeight="24.0" prefWidth="97.0" text="Brake" textFill="#e831e4">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <VBox prefHeight="48.0" prefWidth="32.0" BorderPane.alignment="CENTER" />
+   </right>
+   <top>
+      <GridPane prefHeight="91.0" prefWidth="501.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <RadioButton fx:id="regularRoad" contentDisplay="CENTER" mnemonicParsing="false" selected="true" text="Regular">
+               <toggleGroup>
+                  <ToggleGroup fx:id="roadCondition" />
+               </toggleGroup>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="gravelRoad" mnemonicParsing="false" text="Gravel" toggleGroup="$roadCondition" GridPane.columnIndex="1" />
+            <RadioButton fx:id="wetRoad" mnemonicParsing="false" text="Wet" toggleGroup="$roadCondition" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="iceRoad" mnemonicParsing="false" prefHeight="21.0" prefWidth="83.0" text="Ice" toggleGroup="$roadCondition" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </top>
+   <bottom>
+      <HBox prefHeight="69.0" prefWidth="518.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="58.0" prefWidth="164.0" />
+            <TextField fx:id="feedbackBox" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
